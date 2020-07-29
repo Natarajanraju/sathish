@@ -1,0 +1,48 @@
+.menu-wrap
+{
+  visibility: visible;
+  opacity: 1;
+}
+#navbar
+{
+  justify-content: center;
+}
+
+#navbar nav
+{
+  display: none;
+}
+
+#hero .showcase > div
+{
+  flex-direction: column;
+}
+
+.flex .column
+{
+  flex: 100%;
+}
+
+.test
+{
+  flex-direction: column;
+  flex-basis: 100%;
+  
+}
+
+.test > div
+{
+  margin-top: 1rem;
+}
+
+#linkedin div .posts iframe
+{
+  width: 75vw;
+}
+
+.thanks
+{
+  justify-content: flex-start;
+  text-align: center;
+  margin-top: 2rem;;
+}

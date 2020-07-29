@@ -1,0 +1,98 @@
+:root
+{
+  --primary-color:#d15524;
+  --card-color:#6d221d;
+  --card-thick:#160404;
+  --btn-primary:#9a9892;
+  --btn-hover:#d4724b;
+  --font-primary:#e9f0f3;
+
+}
+
+.logo
+{
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+}
+
+.btn
+{
+  display:inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--btn-primary);
+  transition: all 0.4s ease-in;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.btn:hover
+{
+  background-color: var(--btn-hover);
+}
+
+.card
+{
+  background-color: var(--card-thick);
+}
+
+.bg-dark
+{
+  background: var(--btn-hover);
+  
+}
+
+
+.btn.bg-dark:hover
+{
+  background-color: var(--btn-primary);
+}
+
+.bg-lite
+{
+  background-color: var(--card-color);
+}
+
+.meta
+{
+  color: var(--card-thick);
+  font-weight: 400;
+}
+
+.subs
+{
+  opacity: 0.5;
+}
+
+.align
+{
+  display:flex;
+  flex-direction: column;
+}
+
+.mg
+{
+  margin-top: 200px;
+  padding-bottom: 5rem;
+}
+
+.bg-primary
+{
+  background-color: var(--primary-color);
+}
+
+.bottom
+{
+  position: relative;
+  top: 10vh;
+  width:100%;
+}
+
+button
+{
+  display:inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--btn-primary);
+  transition: all 0.4s ease-in;
+  border-radius: 5px;
+  cursor:pointer;
+}
