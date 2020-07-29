@@ -1,17 +1,55 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-  publish_mode: editorial_workflow
-  media_folder: "img/uploads"
-  collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  branch: master
+
+media_folder: img/uploads
+public_folder: /img
+
+display_url: https://sathishraju.netlify.app/current.html
+
+collections:
+  - name: "Job posting"
+    label: "Job"
+    description: "Current posting"
+    folder: "posts/blog"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "meetup" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - {
+          label: Position,
+          name: position,
+          required: true,
+          widget: list,
+          fields:
+            [
+              { label: Name, name: name, required: true, widget: string },
+              {
+                label: Company,
+                name: company,
+                required: false,
+                widget: string,
+              },
+              {
+                label: Image,
+                name: image,
+                required: false,
+                hint: "If an image isn't specified, a default headshot placeholder image will be used",
+                widget: image,
+              },
+              { label: Text, name: text, required: true, widget: text },
+              {
+                label: Links,
+                name: links,
+                required: false,
+                widget: list,
+                fields:
+                  [
+                    { label: Text, name: linkText, widget: string },
+                    { label: URL, name: linkURL, widget: string },
+                  ],
+              },
+            ],
+        }
+      
